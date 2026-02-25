@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blynked 2.0 Website
+
+Production-ready website for Blynked — the growth partner for tech companies. Built with Next.js 15, TypeScript, and Tailwind CSS v4.
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router, Static Generation)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4 with custom design tokens
+- **Animation:** GSAP + Framer Motion
+- **Forms:** React Hook Form + Zod validation
+- **Fonts:** Inter (variable) + JetBrains Mono
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage — conversion hub with 9 sections |
+| `/how-we-work` | Traction Framework methodology deep-dive |
+| `/results` | Case studies index with filters |
+| `/results/[slug]` | Individual case study (Envative, Mayven Studios, Amsterdam Standard) |
+| `/about` | Team, story, values |
+| `/book-a-call` | Qualifier form + calendar booking |
+| `/careers` | Culture + open roles |
+| `/resources` | Blog/guides (placeholder for Phase 2) |
+| `/privacy` | Privacy policy |
+| `/terms` | Terms of service |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router pages
+├── components/
+│   ├── ui/                 # Design system primitives (Button, Card, Input, etc.)
+│   ├── layout/             # Header, Footer, Mobile Nav, Bottom Bar
+│   ├── sections/           # Page-specific section components
+│   │   ├── home/           # 9 homepage sections
+│   │   ├── how-we-work/    # 4 sections
+│   │   ├── results/        # 5 sections
+│   │   ├── case-study/     # 8 sections
+│   │   ├── about/          # 5 sections
+│   │   ├── book-a-call/    # 5 sections
+│   │   └── careers/        # 4 sections
+│   └── shared/             # Reusable components (ScrollReveal, CTABanner, etc.)
+├── data/                   # Static content data
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utilities, fonts, constants
+└── types/                  # TypeScript type definitions
+```
 
-## Learn More
+## Design System
 
-To learn more about Next.js, take a look at the following resources:
+- **Theme:** Dark glassmorphism with orange (#F47920) accents
+- **Background:** #0A0A0A (deep black)
+- **Typography:** Inter for text, JetBrains Mono for metrics
+- **Components:** Glassmorphic cards, animated counters, scroll reveals
+- **Accessibility:** WCAG AA compliant, reduced motion support, semantic HTML
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Optimized for Vercel deployment. Connect this repo to Vercel for automatic deployments.
 
-## Deploy on Vercel
+```bash
+# Or deploy via CLI
+npx vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Phase 2 (Planned)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Sanity.io CMS integration
+- Interactive Traction Framework visualization
+- 3D parallax card effects
+- Pipeline Growth Calculator
+- Blog + downloadable guides
+- HubSpot CRM integration
+- PostHog analytics
