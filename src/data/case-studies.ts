@@ -45,6 +45,7 @@ export const caseStudies: CaseStudy[] = [
       "Pre-qualification is the hidden lever: better leads mean higher close rates with less effort",
     ],
     outcomeTag: "Pipeline Growth",
+    stageTag: "Scale-up",
   },
   {
     slug: "mayven-studios",
@@ -90,6 +91,7 @@ export const caseStudies: CaseStudy[] = [
       "Multi-channel approaches outperform single-channel efforts for niche agencies",
     ],
     outcomeTag: "Speed to Results",
+    stageTag: "Startup",
   },
   {
     slug: "amsterdam-standard",
@@ -135,6 +137,7 @@ export const caseStudies: CaseStudy[] = [
       "The ROI of a growth system compounds — early investment pays dividends for years",
     ],
     outcomeTag: "Revenue",
+    stageTag: "Scale-up",
   },
 ];
 

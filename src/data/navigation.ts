@@ -13,6 +13,8 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "How We Work", href: "/how-we-work" },
+      { label: "For Startups", href: "/for-startups" },
+      { label: "For Scale-ups", href: "/for-scale-ups" },
       { label: "Careers", href: "/careers" },
     ],
   },
@@ -29,6 +31,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Blog", href: "/resources" },
       { label: "Guides", href: "/resources" },
+      { label: "Academy", href: "/resources#academy" },
     ],
   },
 ];

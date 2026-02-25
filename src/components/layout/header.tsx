@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
@@ -24,29 +25,43 @@ export function Header() {
       </a>
       <header
         className={cn(
-          "fixed top-0 w-full z-[100] transition-all duration-300",
+          "fixed top-0 w-full z-[100] transition-all duration-500",
           isScrolled
-            ? "bg-[rgba(10,10,10,0.85)] backdrop-blur-[16px] border-b border-[rgba(255,255,255,0.05)]"
+            ? "bg-[rgba(10,10,10,0.8)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.04)]"
             : "bg-transparent"
         )}
       >
         <div className="mx-auto max-w-[1400px] px-6 sm:px-12 lg:px-16">
           <nav className="flex items-center justify-between h-[72px]" aria-label="Main navigation">
-            <Link href="/" className="text-text-primary font-bold text-xl tracking-tight">
-              Blynked
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <Image
+                src="/images/logos/blynked-logo.png"
+                alt="Blynked"
+                width={28}
+                height={28}
+                className="opacity-90 group-hover:opacity-100 transition-opacity"
+              />
+              <span className="text-text-primary font-semibold text-[15px] tracking-[-0.01em]">
+                Blynked
+              </span>
             </Link>
 
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-10">
               {mainNav.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors duration-200 hover:text-text-primary",
-                    pathname === link.href ? "text-text-primary" : "text-text-tertiary"
+                    "text-[13px] font-medium transition-colors duration-300 relative",
+                    pathname === link.href
+                      ? "text-text-primary"
+                      : "text-text-tertiary hover:text-text-secondary"
                   )}
                 >
                   {link.label}
+                  {pathname === link.href && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-px bg-accent/40" />
+                  )}
                 </Link>
               ))}
               <Button href="/book-a-call" variant="nav">
@@ -55,14 +70,14 @@ export function Header() {
             </div>
 
             <button
-              className="lg:hidden p-2 text-text-primary"
+              className="lg:hidden p-2 text-text-secondary hover:text-text-primary transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <line x1="2" y1="5" x2="18" y2="5" />
+                <line x1="2" y1="10" x2="18" y2="10" />
+                <line x1="2" y1="15" x2="18" y2="15" />
               </svg>
             </button>
           </nav>

@@ -19,4 +19,5 @@ export interface CaseStudy {
   results: { value: string; label: string }[];
   takeaways: string[];
   outcomeTag: "Pipeline Growth" | "Revenue" | "Speed to Results";
+  stageTag: "Startup" | "Scale-up";
 }

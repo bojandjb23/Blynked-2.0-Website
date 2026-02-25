@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import { HowWeWorkHero } from "@/components/sections/how-we-work/hero";
 import { FrameworkPillars } from "@/components/sections/how-we-work/framework-pillars";
+import { EngagementProgression } from "@/components/sections/how-we-work/engagement-progression";
 import { EngagementModels } from "@/components/sections/how-we-work/engagement-models";
 import { Timeline } from "@/components/sections/how-we-work/timeline";
 import { CTABanner } from "@/components/shared/cta-banner";
 
 export const metadata: Metadata = {
-  title: "How We Work — The Traction Framework",
+  title: "How We Work — The Traction Framework | Blynked",
   description:
-    "A four-pillar system that transforms how tech companies acquire revenue. Positioning, Pipeline, Sales, and Scalability — no guesswork, no dependency on any single channel.",
+    "A revenue engineering system that transforms how tech companies build predictable pipeline. Four pillars. Five phases. One system that works.",
   openGraph: {
     title: "How We Work — The Traction Framework | Blynked",
     description:
-      "A four-pillar system that transforms how tech companies acquire revenue. Positioning, Pipeline, Sales, and Scalability.",
+      "A revenue engineering system that transforms how tech companies build predictable pipeline. Four pillars. Five phases. One system that works.",
     url: "https://blynked.io/how-we-work",
   },
 };
@@ -22,6 +23,7 @@ export default function HowWeWorkPage() {
     <>
       <HowWeWorkHero />
       <FrameworkPillars />
+      <EngagementProgression />
       <EngagementModels />
       <Timeline />
       <CTABanner

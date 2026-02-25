@@ -1,4 +1,3 @@
-import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 
@@ -58,8 +57,14 @@ function XIcon() {
 
 export function Qualification() {
   return (
-    <Section background="secondary" id="qualification">
-      <Container>
+    <section
+      id="qualification"
+      className="relative py-24 sm:py-32 mesh-gradient-section overflow-hidden"
+    >
+      {/* Noise overlay for textured background */}
+      <div className="noise-overlay absolute inset-0 pointer-events-none" />
+
+      <Container className="relative z-10">
         <div className="grid md:grid-cols-2 gap-6">
           <ScrollReveal>
             <div className="glass p-8 md:p-10 h-full">
@@ -102,6 +107,6 @@ export function Qualification() {
           </ScrollReveal>
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }

@@ -7,6 +7,7 @@ import type { CaseStudy } from "@/types/case-study";
 
 type IndustryFilter = "All" | "Software Dev" | "SaaS" | "Tech" | "Digital Agency";
 type OutcomeFilter = "All" | "Pipeline Growth" | "Revenue" | "Speed to Results";
+type StageFilter = "All" | "Startup" | "Scale-up";
 
 interface FilterBarProps {
   caseStudies: CaseStudy[];
@@ -15,6 +16,7 @@ interface FilterBarProps {
 
 const industries: IndustryFilter[] = ["All", "Software Dev", "SaaS", "Tech", "Digital Agency"];
 const outcomes: OutcomeFilter[] = ["All", "Pipeline Growth", "Revenue", "Speed to Results"];
+const stages: StageFilter[] = ["All", "Startup", "Scale-up"];
 
 function FilterPill({
   label,
@@ -44,9 +46,10 @@ function FilterPill({
 export function FilterBar({ caseStudies, onFilterChange }: FilterBarProps) {
   const [industryFilter, setIndustryFilter] = useState<IndustryFilter>("All");
   const [outcomeFilter, setOutcomeFilter] = useState<OutcomeFilter>("All");
+  const [stageFilter, setStageFilter] = useState<StageFilter>("All");
 
   const applyFilters = useCallback(
-    (industry: IndustryFilter, outcome: OutcomeFilter) => {
+    (industry: IndustryFilter, outcome: OutcomeFilter, stage: StageFilter) => {
       let filtered = caseStudies;
 
       if (industry !== "All") {
@@ -54,6 +57,9 @@ export function FilterBar({ caseStudies, onFilterChange }: FilterBarProps) {
       }
       if (outcome !== "All") {
         filtered = filtered.filter((cs) => cs.outcomeTag === outcome);
+      }
+      if (stage !== "All") {
+        filtered = filtered.filter((cs) => cs.stageTag === stage);
       }
 
       onFilterChange(filtered);
@@ -63,12 +69,17 @@ export function FilterBar({ caseStudies, onFilterChange }: FilterBarProps) {
 
   const handleIndustryChange = (industry: IndustryFilter) => {
     setIndustryFilter(industry);
-    applyFilters(industry, outcomeFilter);
+    applyFilters(industry, outcomeFilter, stageFilter);
   };
 
   const handleOutcomeChange = (outcome: OutcomeFilter) => {
     setOutcomeFilter(outcome);
-    applyFilters(industryFilter, outcome);
+    applyFilters(industryFilter, outcome, stageFilter);
+  };
+
+  const handleStageChange = (stage: StageFilter) => {
+    setStageFilter(stage);
+    applyFilters(industryFilter, outcomeFilter, stage);
   };
 
   return (
@@ -98,6 +109,20 @@ export function FilterBar({ caseStudies, onFilterChange }: FilterBarProps) {
                   label={outcome}
                   active={outcomeFilter === outcome}
                   onClick={() => handleOutcomeChange(outcome)}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="hidden sm:block w-px bg-border-glass" />
+          <div className="flex-1">
+            <p className="text-caption text-text-tertiary mb-3">Stage</p>
+            <div className="flex flex-wrap gap-2">
+              {stages.map((stage) => (
+                <FilterPill
+                  key={stage}
+                  label={stage}
+                  active={stageFilter === stage}
+                  onClick={() => handleStageChange(stage)}
                 />
               ))}
             </div>

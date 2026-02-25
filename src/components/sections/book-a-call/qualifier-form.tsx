@@ -13,10 +13,18 @@ const formSchema = z.object({
   companyWebsite: z
     .string()
     .url("Please enter a valid URL (include https://)"),
+  revenueRange: z.string().min(1, "Please select your revenue range"),
   growthChallenge: z.string().min(1, "Please select your primary challenge"),
 });
 
 type FormData = z.infer<typeof formSchema>;
+
+const revenueOptions = [
+  { value: "under-1.5m", label: "Under $1.5M" },
+  { value: "1.5m-4m", label: "$1.5M - $4M" },
+  { value: "4m-12m", label: "$4M - $12M" },
+  { value: "over-12m", label: "Over $12M" },
+];
 
 const challengeOptions = [
   { value: "pipeline", label: "Pipeline / Lead gen" },
@@ -113,6 +121,17 @@ export function QualifierForm() {
             },
           })}
           error={errors.companyWebsite?.message}
+        />
+
+        <Select
+          label="Approximate annual revenue"
+          placeholder="What's your approximate annual revenue?"
+          options={revenueOptions}
+          required
+          {...register("revenueRange", {
+            required: "Please select your revenue range",
+          })}
+          error={errors.revenueRange?.message}
         />
 
         <Select
