@@ -5,10 +5,12 @@ import { ProblemSection } from "@/components/sections/home/problem-section";
 import { FrameworkPreview } from "@/components/sections/home/framework-preview";
 import { EngagementProgression } from "@/components/sections/home/engagement-progression";
 import { CaseStudyHighlights } from "@/components/sections/home/case-study-highlights";
+import { ResultsTimeline } from "@/components/sections/home/results-timeline";
 import { StageRouting } from "@/components/sections/home/stage-routing";
 import { Qualification } from "@/components/sections/home/qualification";
 import { TestimonialSection } from "@/components/sections/home/testimonial-section";
 import { Differentiators } from "@/components/sections/home/differentiators";
+import { FAQSection } from "@/components/sections/home/faq-section";
 import { CTABanner } from "@/components/shared/cta-banner";
 
 export const metadata: Metadata = {
@@ -40,9 +42,18 @@ export default function HomePage() {
       <FrameworkPreview />
       <EngagementProgression />
       <CaseStudyHighlights />
+      <ResultsTimeline />
       <StageRouting />
       <Qualification />
       <TestimonialSection />
+      <CTABanner
+        headline="Stop Hoping. Start Engineering."
+        subtext="Your competitors are building pipeline systems while you wait for referrals. Let's change that."
+        buttonText="Book Your Strategy Call"
+        buttonHref="/book-a-call"
+        trustSignal="Trusted by 20+ tech companies | Average partner ROI: 10x+"
+      />
+      <FAQSection />
       <Differentiators />
       <CTABanner
         headline="Ready to Engineer Predictable Revenue?"

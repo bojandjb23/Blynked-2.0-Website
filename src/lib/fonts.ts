@@ -1,4 +1,4 @@
-import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -6,12 +6,11 @@ export const inter = Inter({
   variable: "--font-inter",
 });
 
-export const instrumentSerif = Instrument_Serif({
-  weight: "400",
+export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-instrument",
-  style: ["normal", "italic"],
+  variable: "--font-space-grotesk",
+  weight: ["600", "700"],
 });
 
 export const jetbrainsMono = JetBrains_Mono({

@@ -2,7 +2,7 @@ export interface CaseStudy {
   slug: string;
   clientName: string;
   industry: string;
-  industryTag: "Software Dev" | "SaaS" | "Tech" | "Digital Agency";
+  industryTag: "Software Dev" | "SaaS" | "Tech" | "Digital Agency" | "Creative Agency" | "Consultancy";
   heroMetric: string;
   heroMetricLabel: string;
   resultSummary: string;
@@ -18,6 +18,8 @@ export interface CaseStudy {
   beforeAfter: { metric: string; before: string; after: string }[];
   results: { value: string; label: string }[];
   takeaways: string[];
-  outcomeTag: "Pipeline Growth" | "Revenue" | "Speed to Results";
+  outcomeTag: "Pipeline Growth" | "Revenue" | "Speed to Results" | "Market Entry" | "Deal Size";
   stageTag: "Startup" | "Scale-up";
+  youtubeVideoId?: string;
+  videoTitle?: string;
 }

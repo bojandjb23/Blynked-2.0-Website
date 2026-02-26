@@ -9,6 +9,8 @@ import { ResultsSection } from "@/components/sections/case-study/results-section
 import { CaseStudyTestimonial } from "@/components/sections/case-study/testimonial";
 import { Takeaways } from "@/components/sections/case-study/takeaways";
 import { CaseStudyCTA } from "@/components/sections/case-study/cta";
+import { VideoEmbed } from "@/components/sections/case-study/video-embed";
+import { RelatedStudies } from "@/components/sections/case-study/related-studies";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -75,7 +77,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
         authorTitle={study.quoteTitle}
         clientName={study.clientName}
       />
+      {study.youtubeVideoId && (
+        <VideoEmbed
+          youtubeVideoId={study.youtubeVideoId}
+          videoTitle={study.videoTitle}
+          clientName={study.clientName}
+        />
+      )}
       <Takeaways takeaways={study.takeaways} />
+      <RelatedStudies currentSlug={slug} />
       <CaseStudyCTA
         clientName={study.clientName}
         nextStudySlug={nextStudy.slug}

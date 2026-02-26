@@ -15,13 +15,13 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent text-white font-semibold px-8 py-4 rounded-[12px] hover:bg-accent-hover hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(244,121,32,0.3)] active:scale-[0.98] transition-all duration-200 min-h-[48px]",
+    "bg-accent text-[#0E0E0E] font-semibold px-8 py-4 btn-chamfered hover:bg-accent-hover hover:shadow-[0_0_30px_rgba(255,113,32,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 min-h-[48px]",
   secondary:
-    "bg-transparent text-accent font-semibold px-8 py-4 rounded-[12px] border border-border-accent hover:border-accent hover:bg-accent-glow transition-all duration-200 min-h-[48px]",
+    "bg-transparent text-accent font-semibold px-8 py-4 border border-accent btn-chamfered hover:bg-accent hover:text-[#0E0E0E] transition-all duration-300 min-h-[48px]",
   ghost:
-    "text-accent font-medium inline-flex items-center gap-2 group hover:gap-3 transition-all duration-200",
+    "text-accent font-medium inline-flex items-center gap-2 group transition-all duration-200",
   nav:
-    "bg-accent text-white font-semibold text-sm px-6 py-2.5 rounded-[8px] hover:bg-accent-hover transition-colors duration-200",
+    "bg-accent text-[#0E0E0E] font-semibold text-sm px-6 py-2.5 btn-chamfered-sm hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(255,113,32,0.25)] transition-all duration-300",
 };
 
 export function Button({
@@ -62,14 +62,25 @@ export function Button({
 
 function ArrowIcon() {
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      className="transition-transform duration-200 group-hover:translate-x-1"
-    >
-      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <span className="relative overflow-hidden w-4 h-4 inline-flex items-center justify-center">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        className="transition-transform duration-200 group-hover:translate-x-[20px] group-hover:opacity-0 absolute"
+      >
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        className="transition-transform duration-200 -translate-x-[20px] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 absolute"
+      >
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
   );
 }

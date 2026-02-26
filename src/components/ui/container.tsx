@@ -11,7 +11,7 @@ export function Container({ children, className, wide }: ContainerProps) {
     <div
       className={cn(
         "mx-auto w-full px-6 sm:px-12 lg:px-16",
-        wide ? "max-w-[1400px]" : "max-w-[1200px]",
+        wide ? "max-w-[1500px]" : "max-w-[1340px]",
         className
       )}
     >

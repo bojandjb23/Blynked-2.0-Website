@@ -46,6 +46,8 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomeTag: "Pipeline Growth",
     stageTag: "Scale-up",
+    youtubeVideoId: "hsGARlONYGE",
+    videoTitle: "From Cold Emails to 10x Better Qualified Leads: How Envative Rebuilt Their Pipeline in 9 Months",
   },
   {
     slug: "mayven-studios",
@@ -92,6 +94,8 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomeTag: "Speed to Results",
     stageTag: "Startup",
+    youtubeVideoId: "hIdpzZRftgY",
+    videoTitle: "7 Qualified Calls in 2.5 Weeks: How Mayven Studios Found Their Pipeline Again!",
   },
   {
     slug: "amsterdam-standard",
@@ -138,6 +142,159 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomeTag: "Revenue",
     stageTag: "Scale-up",
+    youtubeVideoId: "o1hMivJMguE",
+    videoTitle: "Case Study: Amsterdam Standard — 20x ROI with the Traction Framework",
+  },
+  {
+    slug: "thinknimble",
+    clientName: "ThinkNimble",
+    industry: "Software Development",
+    industryTag: "Software Dev",
+    heroMetric: "32",
+    heroMetricLabel: "Meetings in 11 Days",
+    resultSummary:
+      "From zero outbound to 32 qualified meetings booked in just 11 days using a precision-targeted multi-channel strategy.",
+    quote:
+      "The speed at which Blynked delivered results completely changed how we think about business development.",
+    quoteAuthor: "Founder",
+    quoteTitle: "ThinkNimble",
+    companySize: "10-25 employees",
+    pillarsUsed: ["Positioning", "Pipeline"],
+    challenge: [
+      "Software development company with no structured outbound process",
+      "Relying on network and referrals for new business",
+      "Difficulty standing out in a crowded development market",
+      "No systematic way to generate meetings with ideal clients",
+    ],
+    trigger:
+      "The founders realized that waiting for referrals wasn't scalable. They needed a system that could generate qualified meetings on demand.",
+    solution: [
+      "Precision ICP definition targeting companies with specific development needs",
+      "Multi-channel outreach combining LinkedIn, email, and strategic touchpoints",
+      "Message positioning emphasizing unique technical capabilities",
+      "Rapid-fire testing framework to optimize outreach in real-time",
+    ],
+    beforeAfter: [
+      { metric: "Outbound Meetings", before: "0 per month", after: "32 in 11 days" },
+      { metric: "Pipeline Source", before: "Referrals only", after: "Systematic outbound" },
+      { metric: "Time to Results", before: "N/A", after: "11 days" },
+      { metric: "Lead Quality", before: "Random", after: "ICP-matched" },
+    ],
+    results: [
+      { value: "32", label: "Meetings in 11 days" },
+      { value: "11", label: "Days to results" },
+      { value: "100%", label: "Net-new pipeline channel" },
+    ],
+    takeaways: [
+      "Precision targeting beats volume every time — the right message to the right person at the right time",
+      "Speed to results is possible when positioning and outbound infrastructure are built correctly",
+      "Software development companies can generate enterprise meetings through outbound when properly differentiated",
+    ],
+    outcomeTag: "Speed to Results",
+    stageTag: "Startup",
+    youtubeVideoId: "zbxUg0aUFXw",
+    videoTitle:
+      "The EXACT Strategy On How We Helped ThinkNimble Book 32 Meetings in 11 Days",
+  },
+  {
+    slug: "brthrs",
+    clientName: "BRTHRS",
+    industry: "Digital Agency",
+    industryTag: "Digital Agency",
+    heroMetric: "17",
+    heroMetricLabel: "Meetings in 30 Days",
+    resultSummary:
+      "From inconsistent deal flow to 17 meetings with potential clients in just 30 days through systematic outbound.",
+    quote:
+      "Blynked brought structure to our sales process. We finally have a predictable way to fill our pipeline.",
+    quoteAuthor: "Founder",
+    quoteTitle: "BRTHRS",
+    companySize: "10-25 employees",
+    pillarsUsed: ["Positioning", "Pipeline"],
+    challenge: [
+      "Digital agency struggling with inconsistent project pipeline",
+      "No dedicated sales process or outbound infrastructure",
+      "Founder-dependent business development",
+      "Difficulty scaling beyond existing client relationships",
+    ],
+    trigger:
+      "The founders knew they needed to stop relying on luck and referrals. A predictable pipeline was the only way to grow.",
+    solution: [
+      "Clear positioning as a specialized digital partner for specific verticals",
+      "Built targeted outreach infrastructure across LinkedIn and email",
+      "Developed qualification framework to ensure meeting quality",
+      "Systematic follow-up sequences to maximize conversion",
+    ],
+    beforeAfter: [
+      { metric: "Monthly Meetings", before: "2-3 (random)", after: "17 in 30 days" },
+      { metric: "Pipeline Predictability", before: "Unpredictable", after: "Systematic" },
+      { metric: "Sales Process", before: "Ad hoc", after: "Structured" },
+      { metric: "Founder Involvement", before: "100%", after: "System-driven" },
+    ],
+    results: [
+      { value: "17", label: "Meetings in 30 days" },
+      { value: "30", label: "Days to full pipeline" },
+      { value: "5x", label: "Meeting volume increase" },
+    ],
+    takeaways: [
+      "Digital agencies can dramatically increase pipeline through systematic outbound",
+      "Clear positioning makes outreach more effective — specificity wins",
+      "30 days is enough to prove a pipeline system works when executed correctly",
+    ],
+    outcomeTag: "Pipeline Growth",
+    stageTag: "Startup",
+    youtubeVideoId: "0jiDUH7VHxo",
+    videoTitle: "Success Story: 17 Meetings With Potential Clients in 30 Days",
+  },
+  {
+    slug: "caimey",
+    clientName: "Caimey",
+    industry: "Technology",
+    industryTag: "Tech",
+    heroMetric: "3",
+    heroMetricLabel: "New Clients in 2 Months",
+    resultSummary:
+      "Surprised Caimey with 3 potential new clients and 40+ appointments in just 2 months of partnership.",
+    quote:
+      "We were genuinely surprised by the speed and quality of results. Blynked exceeded every expectation.",
+    quoteAuthor: "Founder",
+    quoteTitle: "Caimey",
+    companySize: "10-25 employees",
+    pillarsUsed: ["Positioning", "Pipeline", "Sales"],
+    challenge: [
+      "Technology company struggling to generate consistent new business",
+      "Limited market visibility and brand awareness in target segments",
+      "No outbound system in place despite having a strong product",
+      "Long sales cycles with low conversion rates",
+    ],
+    trigger:
+      "Caimey needed to prove their product-market fit by acquiring new clients faster than organic growth allowed.",
+    solution: [
+      "Market positioning refresh to highlight unique technology capabilities",
+      "Built multi-channel outbound engine targeting ideal customer profiles",
+      "Implemented appointment-setting system with pre-qualification",
+      "Sales coaching to improve conversion from meeting to proposal",
+    ],
+    beforeAfter: [
+      { metric: "New Clients", before: "Slow organic", after: "3 in 2 months" },
+      { metric: "Appointments", before: "Few per quarter", after: "40+ in 2 months" },
+      { metric: "Pipeline Visibility", before: "None", after: "Full CRM tracking" },
+      { metric: "Sales Cycle", before: "6+ months", after: "Accelerated" },
+    ],
+    results: [
+      { value: "3", label: "New clients in 2 months" },
+      { value: "40+", label: "Appointments booked" },
+      { value: "2", label: "Months to results" },
+    ],
+    takeaways: [
+      "A strong product doesn't sell itself — systematic outreach accelerates market validation",
+      "40+ appointments in 2 months proves there's demand when you know where to look",
+      "Pre-qualification is the key to converting appointments into actual clients",
+    ],
+    outcomeTag: "Speed to Results",
+    stageTag: "Startup",
+    youtubeVideoId: "9f1zfHkqkDo",
+    videoTitle: "How We Surprised Caimey With 3 Potential Clients In 2 Months",
   },
 ];
 

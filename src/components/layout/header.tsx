@@ -27,7 +27,7 @@ export function Header() {
         className={cn(
           "fixed top-0 w-full z-[100] transition-all duration-500",
           isScrolled
-            ? "bg-[rgba(10,10,10,0.8)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.04)]"
+            ? "bg-[rgba(14,14,14,0.85)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.04)]"
             : "bg-transparent"
         )}
       >
@@ -52,16 +52,13 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-[13px] font-medium transition-colors duration-300 relative",
+                    "text-[13px] font-medium transition-colors duration-300 nav-link-underline",
                     pathname === link.href
                       ? "text-text-primary"
                       : "text-text-tertiary hover:text-text-secondary"
                   )}
                 >
                   {link.label}
-                  {pathname === link.href && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-px bg-accent/40" />
-                  )}
                 </Link>
               ))}
               <Button href="/book-a-call" variant="nav">

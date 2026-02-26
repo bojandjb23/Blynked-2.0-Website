@@ -191,7 +191,7 @@ export function StageRouting() {
 
         {/* Stage cards */}
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             {stages.map((stage) => {
               const isHovered = hoveredId === stage.id;
               const otherHovered = hoveredId !== null && hoveredId !== stage.id;
@@ -205,7 +205,7 @@ export function StageRouting() {
                   onMouseEnter={() => handleMouseEnter(stage.id)}
                   onMouseLeave={handleMouseLeave}
                   className={cn(
-                    "group relative block rounded-[20px] p-8 sm:p-10 lg:p-12",
+                    "group relative flex flex-col rounded-[20px] p-8 sm:p-10 lg:p-12",
                     "bg-[rgba(26,26,26,0.7)] backdrop-blur-[12px]",
                     "border border-[rgba(255,255,255,0.08)]",
                     "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",

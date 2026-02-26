@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { inter, instrumentSerif, jetbrainsMono } from "@/lib/fonts";
+import { inter, spaceGrotesk, jetbrainsMono } from "@/lib/fonts";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileBottomBar } from "@/components/layout/mobile-bottom-bar";
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll";
+import { Preloader } from "@/components/shared/preloader";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,8 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <Preloader />
         <SmoothScrollProvider>
           <Header />
           <main id="main-content" className="min-h-screen pt-[72px] pb-[80px] lg:pb-0">

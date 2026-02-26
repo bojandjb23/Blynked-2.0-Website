@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AboutHero } from "@/components/sections/about/hero";
 import { OriginStory } from "@/components/sections/about/origin-story";
-import { TeamSection } from "@/components/sections/about/team-section";
+import { TeamCarousel } from "@/components/sections/about/team-carousel";
 import { Values } from "@/components/sections/about/values";
 import { ThreePillars } from "@/components/sections/about/three-pillars";
 import { CTABanner } from "@/components/shared/cta-banner";
@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <OriginStory />
-      <TeamSection />
+      <TeamCarousel />
       <Values />
       <ThreePillars />
       <CTABanner
